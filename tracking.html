@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking Pengiriman - Toko Buku Online</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Toko Buku Online</h1>
+            <nav>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="stok.html">Katalog</a>
+                <a href="checkout.html">Pemesanan</a>
+                <a href="tracking.html" class="active">Tracking</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>Tracking Pengiriman</h2>
+        
+        <section class="tracking-search">
+            <div class="search-box">
+                <div class="form-group">
+                    <label for="nomorDO">Nomor Delivery Order</label>
+                    <input type="text" id="nomorDO" placeholder="Masukkan nomor DO">
+                </div>
+                <button id="cariBtn" class="btn-primary">Cari</button>
+            </div>
+        </section>
+
+        <section id="trackingResult" class="tracking-result" style="display: none;">
+            <div class="result-card">
+                <h3>Informasi Pengiriman</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <strong>Nomor DO:</strong>
+                        <span id="resultDO"></span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Nama Pemesan:</strong>
+                        <span id="resultNama"></span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Tanggal Kirim:</strong>
+                        <span id="resultTanggal"></span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Ekspedisi:</strong>
+                        <span id="resultEkspedisi"></span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Jenis Paket:</strong>
+                        <span id="resultPaket"></span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Total Pembayaran:</strong>
+                        <span id="resultTotal"></span>
+                    </div>
+                </div>
+
+                <h4>Status Pengiriman</h4>
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div id="progressFill" class="progress-fill"></div>
+                    </div>
+                    <div class="progress-steps">
+                        <div class="step" id="step1">
+                            <div class="step-icon">📦</div>
+                            <div class="step-label">Dikemas</div>
+                        </div>
+                        <div class="step" id="step2">
+                            <div class="step-icon">🚚</div>
+                            <div class="step-label">Dikirim</div>
+                        </div>
+                        <div class="step" id="step3">
+                            <div class="step-icon">🏪</div>
+                            <div class="step-label">Tiba di Kota</div>
+                        </div>
+                        <div class="step" id="step4">
+                            <div class="step-icon">✅</div>
+                            <div class="step-label">Diterima</div>
+                        </div>
+                    </div>
+                </div>
+
+                <h4>Riwayat Pengiriman</h4>
+                <ul id="historyList" class="history-list">
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Toko Buku Online. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/tracking.js"></script>
+</body>
+</html>

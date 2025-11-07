@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Toko Buku Online</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Toko Buku Online</h1>
+            <nav>
+                <a href="dashboard.html" class="active">Dashboard</a>
+                <a href="#" id="logoutBtn">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="greeting-section">
+            <h2 id="greetingText">Selamat Datang!</h2>
+            <p id="currentTime"></p>
+        </section>
+
+        <section class="dashboard-menu">
+            <h3>Menu Utama</h3>
+            <div class="menu-grid">
+                <a href="stok.html" class="menu-card">
+                    <div class="menu-icon">📚</div>
+                    <h4>Katalog Buku</h4>
+                    <p>Lihat dan kelola stok buku</p>
+                </a>
+                <a href="checkout.html" class="menu-card">
+                    <div class="menu-icon">🛒</div>
+                    <h4>Pemesanan</h4>
+                    <p>Buat pesanan baru</p>
+                </a>
+                <a href="tracking.html" class="menu-card">
+                    <div class="menu-icon">📦</div>
+                    <h4>Tracking Pengiriman</h4>
+                    <p>Lacak status pengiriman</p>
+                </a>
+                <a href="#" class="menu-card">
+                    <div class="menu-icon">📊</div>
+                    <h4>Laporan Pemesanan</h4>
+                    <p>Lihat laporan pemesanan</p>
+                </a>
+                <a href="#" class="menu-card">
+                    <div class="menu-icon">📜</div>
+                    <h4>History Transaksi</h4>
+                    <p>Riwayat transaksi</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Toko Buku Online. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

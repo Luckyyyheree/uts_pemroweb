@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan - Toko Buku Online</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Toko Buku Online</h1>
+            <nav>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="stok.html">Katalog</a>
+                <a href="checkout.html" class="active">Pemesanan</a>
+                <a href="tracking.html">Tracking</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>Form Pemesanan</h2>
+        
+        <section class="checkout-section">
+            <div class="checkout-form">
+                <h3>Pilih Buku</h3>
+                <div class="form-group">
+                    <label for="pilihBuku">Pilih Buku</label>
+                    <select id="pilihBuku">
+                        <option value="">-- Pilih Buku --</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="jumlahBuku">Jumlah</label>
+                    <input type="number" id="jumlahBuku" min="1" value="1">
+                </div>
+                <button id="tambahKeranjangBtn" class="btn-primary">Tambah ke Keranjang</button>
+
+                <h3>Keranjang Belanja</h3>
+                <table id="keranjangTable">
+                    <thead>
+                        <tr>
+                            <th>Judul</th>
+                            <th>Harga</th>
+                            <th>Jumlah</th>
+                            <th>Subtotal</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="keranjangBody">
+                    </tbody>
+                </table>
+                <div class="total-section">
+                    <h3>Total: Rp <span id="totalHarga">0</span></h3>
+                </div>
+
+                <h3>Informasi Pemesan</h3>
+                <form id="checkoutForm">
+                    <div class="form-group">
+                        <label for="namaPemesan">Nama Lengkap</label>
+                        <input type="text" id="namaPemesan" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="emailPemesan">Email</label>
+                        <input type="email" id="emailPemesan" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="teleponPemesan">Telepon</label>
+                        <input type="tel" id="teleponPemesan" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="alamatPemesan">Alamat Lengkap</label>
+                        <textarea id="alamatPemesan" rows="3" required></textarea>
+                    </div>
+
+                    <h3>Metode Pembayaran</h3>
+                    <div class="form-group">
+                        <label>
+                            <input type="radio" name="pembayaran" value="transfer" required> Transfer Bank
+                        </label>
+                        <label>
+                            <input type="radio" name="pembayaran" value="cod"> COD (Cash on Delivery)
+                        </label>
+                        <label>
+                            <input type="radio" name="pembayaran" value="ewallet"> E-Wallet
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn-primary btn-large">Proses Pesanan</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Toko Buku Online. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+</html>
